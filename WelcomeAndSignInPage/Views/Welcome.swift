@@ -26,20 +26,7 @@ struct Welcome: View {
                     
                     VStack(spacing: 20) {
                         // Get Started Button
-                        Button(action: {
-                            
-                        }, label: {
-                            Text("Get Started")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity, maxHeight: 55)
-                                .background(
-                                    Color("PrimaryColor")
-                                )
-                                .clipShape(Capsule())
-                                .padding(.horizontal)
-                        })
+                        MainButton(title: "Get Started", color: Color(.white), bgColor: Color("PrimaryColor"))
                         
                         NavigationLink(destination: Login().navigationBarHidden(true)) {
                             // Sign In Button

@@ -13,6 +13,8 @@
 		AD176171270E988600E30E5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD176170270E988600E30E5A /* Preview Assets.xcassets */; };
 		AD176179270EE14200E30E5A /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD176178270EE14200E30E5A /* Welcome.swift */; };
 		AD17617B270EE14900E30E5A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD17617A270EE14900E30E5A /* Login.swift */; };
+		AD176185270EE97900E30E5A /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD176184270EE97900E30E5A /* MainButton.swift */; };
+		AD176187270EED8500E30E5A /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD176186270EED8500E30E5A /* SignInButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		AD176170270E988600E30E5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD176178270EE14200E30E5A /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		AD17617A270EE14900E30E5A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		AD176184270EE97900E30E5A /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		AD176186270EED8500E30E5A /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +78,21 @@
 		AD176177270EE13500E30E5A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD176183270EE95100E30E5A /* Helper */,
 				AD17616B270E988200E30E5A /* ContentView.swift */,
 				AD176178270EE14200E30E5A /* Welcome.swift */,
 				AD17617A270EE14900E30E5A /* Login.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AD176183270EE95100E30E5A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AD176184270EE97900E30E5A /* MainButton.swift */,
+				AD176186270EED8500E30E5A /* SignInButton.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +169,8 @@
 				AD176179270EE14200E30E5A /* Welcome.swift in Sources */,
 				AD17616A270E988200E30E5A /* WelcomeAndSignInPageApp.swift in Sources */,
 				AD17617B270EE14900E30E5A /* Login.swift in Sources */,
+				AD176185270EE97900E30E5A /* MainButton.swift in Sources */,
+				AD176187270EED8500E30E5A /* SignInButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
