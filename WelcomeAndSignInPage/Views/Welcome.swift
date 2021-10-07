@@ -9,65 +9,66 @@ import SwiftUI
 
 struct Welcome: View {
     var body: some View {
-        ZStack {
-            Color("BgColor")
-                .ignoresSafeArea()
-            
-            VStack {
-                Spacer()
+        NavigationView {
+            ZStack {
+                Color("BgColor")
+                    .ignoresSafeArea()
                 
-                Image("onboard")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding()
-                
-                Spacer()
-                
-                VStack(spacing: 20) {
-                    // Get Started Button
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Get Started")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, maxHeight: 55)
-                            .background(
-                                Color("PrimaryColor")
-                            )
-                            .clipShape(Capsule())
-                            .padding(.horizontal)
-                    })
+                VStack {
+                    Spacer()
                     
-                    // Sign In Button
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Sign In")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("PrimaryColor"))
-                            .frame(maxWidth: .infinity, maxHeight: 55)
-                            .background(
-                                Color(.white)
-                            )
-                            .clipShape(Capsule())
-                            .padding(.horizontal)
-                    })
+                    Image("onboard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
                     
-                    HStack {
-                        Text("New around here?")
-                        
+                    Spacer()
+                    
+                    VStack(spacing: 20) {
+                        // Get Started Button
                         Button(action: {
                             
                         }, label: {
-                            Text("Sign in")
-                                .foregroundColor(Color("PrimaryColor"))
+                            Text("Get Started")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, maxHeight: 55)
+                                .background(
+                                    Color("PrimaryColor")
+                                )
+                                .clipShape(Capsule())
+                                .padding(.horizontal)
                         })
+                        
+                        NavigationLink(destination: Login().navigationBarHidden(true)) {
+                            // Sign In Button
+                            Text("Sign In")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("PrimaryColor"))
+                                .frame(maxWidth: .infinity, maxHeight: 55)
+                                .background(
+                                    Color(.white)
+                                )
+                                .clipShape(Capsule())
+                                .padding(.horizontal)
+                                .shadow(color: Color.black.opacity(0.08), radius: 4)
+                        }
+                        
+                        HStack {
+                            Text("New around here?")
+                            
+                            Button(action: {
+                                
+                            }, label: {
+                                Text("Sign up")
+                                    .foregroundColor(Color("PrimaryColor"))
+                            })
+                        }
                     }
+                    .offset(y: -30)
                 }
-                .offset(y: -30)
             }
         }
     }
